@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  DreamStuff
 //
 //  Created by Dan Lindsay on 2016-09-06.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
