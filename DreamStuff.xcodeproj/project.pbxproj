@@ -22,6 +22,7 @@
 		7B4B387E1D7F2D1B00BD5549 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B38761D7F2D1B00BD5549 /* Store+CoreDataClass.swift */; };
 		7B4B387F1D7F2D1B00BD5549 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B38771D7F2D1B00BD5549 /* Store+CoreDataProperties.swift */; };
 		7B4B38841D7F38BB00BD5549 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B38831D7F38BB00BD5549 /* MaterialView.swift */; };
+		7B76EEDE1D7F40FE0015C3C2 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B76EEDD1D7F40FE0015C3C2 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		7B4B38761D7F2D1B00BD5549 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B4B38771D7F2D1B00BD5549 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7B4B38831D7F38BB00BD5549 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		7B76EEDD1D7F40FE0015C3C2 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4B38831D7F38BB00BD5549 /* MaterialView.swift */,
+				7B76EEDD1D7F40FE0015C3C2 /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B76EEDE1D7F40FE0015C3C2 /* ItemCell.swift in Sources */,
 				7B4B38781D7F2D1B00BD5549 /* ItemType+CoreDataClass.swift in Sources */,
 				7B4B38791D7F2D1B00BD5549 /* ItemType+CoreDataProperties.swift in Sources */,
 				7B4B385E1D7F239D00BD5549 /* MainVC.swift in Sources */,
@@ -366,6 +370,7 @@
 				7B4B386F1D7F239D00BD5549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
