@@ -34,10 +34,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IndexCell" rowHeight="182" id="E38-5u-gLJ" customClass="ItemCell" customModule="DreamStuff" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="728" height="182"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="182"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E38-5u-gLJ" id="Wle-Wi-chd">
-                                            <frame key="frameInset" width="728" height="182"/>
+                                            <frame key="frameInset" width="343" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-Xj-3jg">
@@ -243,6 +243,12 @@
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="ZN4-za-0lR" id="3wp-iq-Nl0"/>
+                        <outlet property="priceField" destination="LfE-0p-ZU8" id="8SZ-bq-hIC"/>
+                        <outlet property="storePicker" destination="DbJ-Ru-TUK" id="w81-84-BS7"/>
+                        <outlet property="titleField" destination="A9p-Gh-qsh" id="o6a-Cj-jJX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4M-Y0-pvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
