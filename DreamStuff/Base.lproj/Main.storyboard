@@ -160,6 +160,9 @@
                                     <constraint firstAttribute="height" constant="108" id="0XM-Zp-K6J"/>
                                     <constraint firstAttribute="width" constant="108" id="TjX-dh-jtV"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="BVO-Lt-04A" eventType="touchUpInside" id="27m-3P-Ym5"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Gh-qsh" customClass="CustomTextField" customModule="DreamStuff" customModuleProvider="target">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -244,18 +247,22 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="sDf-Hb-Ur4">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="9tz-WS-szc">
                             <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="BVO-Lt-04A" id="Sxl-ni-iew"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="ZN4-za-0lR" id="3wp-iq-Nl0"/>
                         <outlet property="priceField" destination="LfE-0p-ZU8" id="8SZ-bq-hIC"/>
                         <outlet property="storePicker" destination="DbJ-Ru-TUK" id="w81-84-BS7"/>
+                        <outlet property="thumbImg" destination="dHG-Mh-PZG" id="zh4-g3-UL7"/>
                         <outlet property="titleField" destination="A9p-Gh-qsh" id="o6a-Cj-jJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4M-Y0-pvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="-766"/>
+            <point key="canvasLocation" x="1624" y="-991"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nz3-yV-PN9">
