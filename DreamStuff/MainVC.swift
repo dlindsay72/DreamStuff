@@ -43,6 +43,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         cell.configureCell(item: item)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects , objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailsVC", sender: item)
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailsVC" {
+            if let destination = segue.destination as? ItemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let sections = controller.sections {
@@ -130,20 +148,20 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     func generateTestData() {
         
-        let item = Item(context: context)
-        item.title = "Macbook Pro"
-        item.price = 1800
-        item.details = "I can't wait for the September event! Hopefully they release new MBP's."
-        
-        let item2 = Item(context: context)
-        item2.title = "Bode Headphones"
-        item2.price = 300
-        item2.details = "But man, it's so nice to be able to block out everyone with this noise cancelling tech."
-        
-        let item3 = Item(context: context)
-        item3.title = "Tesla Model S"
-        item3.price = 110000
-        item3.details = "Wow, this car is beautiful! One day, sometime in the future, I will own it!!"
+//        let item = Item(context: context)
+//        item.title = "Macbook Pro"
+//        item.price = 1800
+//        item.details = "I can't wait for the September event! Hopefully they release new MBP's."
+//        
+//        let item2 = Item(context: context)
+//        item2.title = "Bode Headphones"
+//        item2.price = 300
+//        item2.details = "But man, it's so nice to be able to block out everyone with this noise cancelling tech."
+//        
+//        let item3 = Item(context: context)
+//        item3.title = "Tesla Model S"
+//        item3.price = 110000
+//        item3.details = "Wow, this car is beautiful! One day, sometime in the future, I will own it!!"
         
         ad.saveContext()
         
