@@ -122,16 +122,131 @@
                     <navigationItem key="navigationItem" title="DreamStuff" id="Zig-5Z-ki9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bZJ-2N-1lr">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="BVO-Lt-04A" kind="show" identifier="ItemDetailsVCNew" id="U3k-fq-m9x"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="segment" destination="wRo-HD-4cP" id="0YC-y9-lMu"/>
                         <outlet property="tableView" destination="w6w-R5-peL" id="RA9-4D-D1b"/>
+                        <segue destination="BVO-Lt-04A" kind="show" identifier="ItemDetailsVC" id="1hP-B2-ELI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="867" y="-523"/>
+            <point key="canvasLocation" x="873" y="-594"/>
+        </scene>
+        <!--Add/Edit-->
+        <scene sceneID="nLo-YM-736">
+            <objects>
+                <viewController id="BVO-Lt-04A" customClass="ItemDetailsVC" customModule="DreamStuff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OgL-VY-HL6"/>
+                        <viewControllerLayoutGuide type="bottom" id="1qt-Gh-yso"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gT4-gl-rnS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="dHG-Mh-PZG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="63r-Nw-8fI"/>
+                                    <constraint firstAttribute="width" constant="108" id="tm3-yr-Pm2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6P-dn-2Rb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="0XM-Zp-K6J"/>
+                                    <constraint firstAttribute="width" constant="108" id="TjX-dh-jtV"/>
+                                </constraints>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Gh-qsh" customClass="CustomTextField" customModule="DreamStuff" customModuleProvider="target">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a5W-4M-Epl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfE-0p-ZU8" customClass="CustomTextField" customModule="DreamStuff" customModuleProvider="target">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iVa-bl-Fck"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZN4-za-0lR" customClass="CustomTextField" customModule="DreamStuff" customModuleProvider="target">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="IXd-of-umT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZD-OI-ecH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="fn5-7R-pxa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etE-9V-mx1">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="N0x-pU-NLC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
+                                <state key="normal" title="Save Item">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-Ru-TUK">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="338" id="3X8-Uw-xXE"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="A9p-Gh-qsh" secondAttribute="trailing" id="3W5-7b-NO8"/>
+                            <constraint firstItem="ZN4-za-0lR" firstAttribute="top" secondItem="c6P-dn-2Rb" secondAttribute="bottom" constant="1" id="4Tj-an-u8g"/>
+                            <constraint firstItem="A9p-Gh-qsh" firstAttribute="leading" secondItem="c6P-dn-2Rb" secondAttribute="trailing" constant="8" id="55h-wb-WTm"/>
+                            <constraint firstItem="LfE-0p-ZU8" firstAttribute="leading" secondItem="c6P-dn-2Rb" secondAttribute="trailing" constant="8" id="7Zr-ae-aga"/>
+                            <constraint firstItem="1qt-Gh-yso" firstAttribute="top" secondItem="etE-9V-mx1" secondAttribute="bottom" constant="37" id="7zV-af-lwT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LfE-0p-ZU8" secondAttribute="trailing" id="8IM-ef-bSp"/>
+                            <constraint firstItem="OZD-OI-ecH" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leadingMargin" constant="233" id="Blx-5I-Akz"/>
+                            <constraint firstItem="dHG-Mh-PZG" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leadingMargin" id="FGH-BQ-2xg"/>
+                            <constraint firstItem="etE-9V-mx1" firstAttribute="top" secondItem="DbJ-Ru-TUK" secondAttribute="bottom" constant="46" id="GG0-uq-ivq"/>
+                            <constraint firstItem="dHG-Mh-PZG" firstAttribute="top" secondItem="OgL-VY-HL6" secondAttribute="bottom" constant="8" id="HAs-E2-iWP"/>
+                            <constraint firstItem="etE-9V-mx1" firstAttribute="trailing" secondItem="gT4-gl-rnS" secondAttribute="trailingMargin" id="ToF-ek-C3A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OZD-OI-ecH" secondAttribute="trailing" constant="233" id="Y9W-Zj-ROl"/>
+                            <constraint firstItem="etE-9V-mx1" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leadingMargin" id="ZYd-vH-xpk"/>
+                            <constraint firstItem="c6P-dn-2Rb" firstAttribute="top" secondItem="OgL-VY-HL6" secondAttribute="bottom" constant="8" id="Zsq-dQ-FJp"/>
+                            <constraint firstAttribute="trailing" secondItem="DbJ-Ru-TUK" secondAttribute="trailing" id="b5a-pe-lK6"/>
+                            <constraint firstItem="LfE-0p-ZU8" firstAttribute="top" secondItem="A9p-Gh-qsh" secondAttribute="bottom" constant="8" id="gq9-WH-OCg"/>
+                            <constraint firstItem="A9p-Gh-qsh" firstAttribute="top" secondItem="OgL-VY-HL6" secondAttribute="bottom" constant="21" id="nos-H8-Wg6"/>
+                            <constraint firstItem="DbJ-Ru-TUK" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leading" id="obb-PB-9dx"/>
+                            <constraint firstItem="ZN4-za-0lR" firstAttribute="trailing" secondItem="gT4-gl-rnS" secondAttribute="trailingMargin" id="ouD-Ch-8lu"/>
+                            <constraint firstItem="ZN4-za-0lR" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leadingMargin" id="pQd-ap-hHk"/>
+                            <constraint firstItem="OZD-OI-ecH" firstAttribute="top" secondItem="ZN4-za-0lR" secondAttribute="bottom" constant="94" id="uDh-9f-N4R"/>
+                            <constraint firstItem="c6P-dn-2Rb" firstAttribute="leading" secondItem="gT4-gl-rnS" secondAttribute="leadingMargin" id="yfg-xO-VKr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add/Edit" id="sDf-Hb-Ur4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="9tz-WS-szc">
+                            <color key="tintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4M-Y0-pvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1538" y="-766"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nz3-yV-PN9">
@@ -141,6 +256,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2Aa-nz-Teq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,10 +269,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpH-dQ-DFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-247"/>
+            <point key="canvasLocation" x="220" y="-459"/>
         </scene>
     </scenes>
     <resources>
+        <image name="imagePick" width="300" height="300"/>
         <image name="tesla" width="800" height="489"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1hP-B2-ELI"/>
+    </inferredMetricsTieBreakers>
 </document>
